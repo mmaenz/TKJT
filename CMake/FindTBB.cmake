@@ -23,13 +23,15 @@ include(FindPackageHandleStandardArgs)
 # Check for required variables
 # =============================================================================
 
-if (LINUX)
-  set (TBB_ROOT_DIR "/usr")
-  message("Running linux")
-elseif(APPLE)
-  set (TBB_ROOT_DIR "/usr/local")
-  message("Running osx")
-elseif()
+if (UNIX)
+  if (APPLE)  
+    set (TBB_ROOT_DIR "/usr/local")
+    message("Running osx")
+  else()
+    set (TBB_ROOT_DIR "/usr")
+    message("Running *X")
+  endif()
+else()
   message(FATAL_ERROR "Unsupported OS.")
 endif()
 
