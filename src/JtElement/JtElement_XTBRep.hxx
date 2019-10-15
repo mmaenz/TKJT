@@ -35,7 +35,7 @@ public:
 
   void ClearData() { myData.Free(); }
 
-  DEFINE_STANDARD_RTTI(JtElement_XTBRep)
+  DEFINE_STANDARD_RTTIEXT(JtElement_XTBRep,JtData_Object)
   DEFINE_OBJECT_CLASS (JtElement_XTBRep)
 
 protected:

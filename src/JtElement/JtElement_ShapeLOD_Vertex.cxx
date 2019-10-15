@@ -31,7 +31,6 @@
 //#define NO_JT_MULTITHREADING
 #include <JtData_Parallel.hxx>
 
-IMPLEMENT_STANDARD_HANDLE (JtElement_ShapeLOD_Vertex, JtElement_ShapeLOD_Base)
 IMPLEMENT_STANDARD_RTTIEXT(JtElement_ShapeLOD_Vertex, JtElement_ShapeLOD_Base)
 
 IMPLEMENT_OBJECT_CLASS(JtElement_ShapeLOD_Vertex, "Vertex Shape LOD Object",

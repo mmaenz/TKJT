@@ -42,7 +42,7 @@ public:
   //! Return node's name.
   const TCollection_ExtendedString& Name() const { return myName; }
 
-  DEFINE_STANDARD_RTTI(JtNode_Base)
+  DEFINE_STANDARD_RTTIEXT(JtNode_Base,JtData_Object)
   DEFINE_OBJECT_CLASS (JtNode_Base)
 
 protected:

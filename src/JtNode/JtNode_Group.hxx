@@ -35,7 +35,7 @@ public:
   //! Return list of children.
   const VectorOfObjects& Children() const { return myChildren; }
 
-  DEFINE_STANDARD_RTTI(JtNode_Group)
+  DEFINE_STANDARD_RTTIEXT(JtNode_Group,JtNode_Base)
   DEFINE_OBJECT_CLASS (JtNode_Group)
 
 protected:

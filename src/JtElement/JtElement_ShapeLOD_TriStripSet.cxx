@@ -17,7 +17,6 @@
 #include <JtElement_ShapeLOD_TriStripSet.hxx>
 #include <JtData_Reader.hxx>
 
-IMPLEMENT_STANDARD_HANDLE (JtElement_ShapeLOD_TriStripSet, JtElement_ShapeLOD_Vertex)
 IMPLEMENT_STANDARD_RTTIEXT(JtElement_ShapeLOD_TriStripSet, JtElement_ShapeLOD_Vertex)
 
 IMPLEMENT_OBJECT_CLASS(JtElement_ShapeLOD_TriStripSet, "Tri-Strip Set Shape LOD Object",

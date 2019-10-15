@@ -28,7 +28,7 @@
 
 #include <fstream>
 
-class Handle(JtNode_Partition);
+class JtNode_Partition;
 
 DEFINE_STANDARD_HANDLE(JtData_Model, MMgt_TShared)
 
@@ -71,7 +71,7 @@ public:
   //! Return minor version of Jt file.
   Standard_Integer                  MinorVersion() const { return myMinorVersion; }
 
-  DEFINE_STANDARD_RTTI(JtData_Model)
+  DEFINE_STANDARD_RTTIEXT(JtData_Model,MMgt_TShared)
 
 protected:
   //! Open the file.

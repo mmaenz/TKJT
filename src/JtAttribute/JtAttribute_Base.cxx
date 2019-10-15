@@ -17,7 +17,6 @@
 #include <JtAttribute_Base.hxx>
 #include <JtData_Reader.hxx>
 
-IMPLEMENT_STANDARD_HANDLE (JtAttribute_Base, JtData_Object)
 IMPLEMENT_STANDARD_RTTIEXT(JtAttribute_Base, JtData_Object)
 
 //=======================================================================

@@ -21,7 +21,6 @@
 #include <JtElement_XTBRep.hxx>
 
 #include <TopoDS_Shape.hxx>
-#include <Handle_Transfer_TransientProcess.hxx>
 
 class Standard_Mutex;
 

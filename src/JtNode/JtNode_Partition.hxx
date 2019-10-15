@@ -41,7 +41,7 @@ public:
   //! Returns file name.
   const TCollection_ExtendedString& FileName() const { return myFileName; }
 
-  DEFINE_STANDARD_RTTI(JtNode_Partition)
+  DEFINE_STANDARD_RTTIEXT(JtNode_Partition,JtNode_Group)
   DEFINE_OBJECT_CLASS (JtNode_Partition)
 
 protected:

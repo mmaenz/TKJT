@@ -17,7 +17,6 @@
 #include <JtNode_Part.hxx>
 #include <JtData_Reader.hxx>
 
-IMPLEMENT_STANDARD_HANDLE (JtNode_Part, JtNode_MetaData)
 IMPLEMENT_STANDARD_RTTIEXT(JtNode_Part, JtNode_MetaData)
 
 IMPLEMENT_OBJECT_CLASS(JtNode_Part, "Part Object",

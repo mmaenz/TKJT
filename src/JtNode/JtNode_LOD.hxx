@@ -30,7 +30,7 @@ public:
   //! Dump this entity.
   Standard_EXPORT virtual Standard_Integer Dump (Standard_OStream& theStream) const;
 
-  DEFINE_STANDARD_RTTI(JtNode_LOD)
+  DEFINE_STANDARD_RTTIEXT(JtNode_LOD,JtNode_Group)
   DEFINE_OBJECT_CLASS (JtNode_LOD)
 
 protected:

@@ -17,7 +17,6 @@
 #include <JtProperty_Base.hxx>
 #include <JtData_Reader.hxx>
 
-IMPLEMENT_STANDARD_HANDLE (JtProperty_Base, JtData_Object)
 IMPLEMENT_STANDARD_RTTIEXT(JtProperty_Base, JtData_Object)
 
 IMPLEMENT_OBJECT_CLASS(JtProperty_Base, "Base property",

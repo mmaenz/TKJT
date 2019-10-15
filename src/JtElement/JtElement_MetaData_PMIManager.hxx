@@ -199,7 +199,7 @@ public:
   //! Obtain string by ID.
   const TCollection_AsciiString& String (Jt_I32 theID) const { return myStringTable[theID]; }
 
-  DEFINE_STANDARD_RTTI(JtElement_MetaData_PMIManager)
+  DEFINE_STANDARD_RTTIEXT(JtElement_MetaData_PMIManager,JtData_Object)
   DEFINE_OBJECT_CLASS (JtElement_MetaData_PMIManager)
 
 protected:

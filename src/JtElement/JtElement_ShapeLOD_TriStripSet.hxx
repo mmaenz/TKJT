@@ -30,7 +30,7 @@ public:
   //! Dump this entity.
   Standard_EXPORT virtual Standard_Integer Dump (Standard_OStream& theStream) const;
 
-  DEFINE_STANDARD_RTTI(JtElement_ShapeLOD_TriStripSet)
+  DEFINE_STANDARD_RTTIEXT(JtElement_ShapeLOD_TriStripSet,JtElement_ShapeLOD_Vertex)
   DEFINE_OBJECT_CLASS (JtElement_ShapeLOD_TriStripSet)
 };
 

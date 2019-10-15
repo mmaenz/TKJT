@@ -18,7 +18,6 @@
 #include <JtData_Reader.hxx>
 #include <JtData_DeferredObject.hxx>
 
-IMPLEMENT_STANDARD_HANDLE (JtNode_Base, JtData_Object)
 IMPLEMENT_STANDARD_RTTIEXT(JtNode_Base, JtData_Object)
 
 IMPLEMENT_OBJECT_CLASS(JtNode_Base, "Base node",

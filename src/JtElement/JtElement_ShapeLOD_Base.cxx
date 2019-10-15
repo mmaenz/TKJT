@@ -17,7 +17,6 @@
 #include <JtElement_ShapeLOD_Base.hxx>
 #include <JtData_Reader.hxx>
 
-IMPLEMENT_STANDARD_HANDLE (JtElement_ShapeLOD_Base, JtData_Object)
 IMPLEMENT_STANDARD_RTTIEXT(JtElement_ShapeLOD_Base, JtData_Object)
 
 IMPLEMENT_OBJECT_CLASS(JtElement_ShapeLOD_Base, "Base Shape LOD Object",

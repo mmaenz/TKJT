@@ -32,7 +32,7 @@ public:
   //! Dump this entity.
   Standard_EXPORT virtual Standard_Integer Dump (Standard_OStream& theStream) const;
 
-  DEFINE_STANDARD_RTTI(JtAttribute_Base)
+  DEFINE_STANDARD_RTTIEXT(JtAttribute_Base,JtData_Object)
 
 protected:
   Jt_I16 myVersion;

@@ -19,7 +19,6 @@
 
 #include <JtElement_ShapeLOD_Vertex.hxx>
 
-IMPLEMENT_STANDARD_HANDLE (JtNode_Shape_Vertex, JtNode_Shape_Base)
 IMPLEMENT_STANDARD_RTTIEXT(JtNode_Shape_Vertex, JtNode_Shape_Base)
 
 IMPLEMENT_OBJECT_CLASS(JtNode_Shape_Vertex, "Vertex Shape Object",

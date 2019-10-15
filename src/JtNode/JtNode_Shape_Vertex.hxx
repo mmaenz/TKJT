@@ -29,7 +29,7 @@ public:
   //! Dump this entity.
   Standard_EXPORT virtual Standard_Integer Dump (Standard_OStream& S) const;
 
-  DEFINE_STANDARD_RTTI(JtNode_Shape_Vertex)
+  DEFINE_STANDARD_RTTIEXT(JtNode_Shape_Vertex,JtNode_Shape_Base)
   DEFINE_OBJECT_CLASS (JtNode_Shape_Vertex)
 };
 

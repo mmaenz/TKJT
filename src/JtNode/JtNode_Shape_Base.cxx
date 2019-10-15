@@ -17,7 +17,6 @@
 #include <JtNode_Shape_Base.hxx>
 #include <JtData_Reader.hxx>
 
-IMPLEMENT_STANDARD_HANDLE (JtNode_Shape_Base, JtNode_Base)
 IMPLEMENT_STANDARD_RTTIEXT(JtNode_Shape_Base, JtNode_Base)
 
 IMPLEMENT_OBJECT_CLASS(JtNode_Shape_Base, "Base Shape Object",

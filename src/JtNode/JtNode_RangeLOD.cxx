@@ -17,7 +17,6 @@
 #include <JtNode_RangeLOD.hxx>
 #include <JtData_Reader.hxx>
 
-IMPLEMENT_STANDARD_HANDLE (JtNode_RangeLOD, JtNode_LOD)
 IMPLEMENT_STANDARD_RTTIEXT(JtNode_RangeLOD, JtNode_LOD)
 
 IMPLEMENT_OBJECT_CLASS(JtNode_RangeLOD, "RangeLOD Object",

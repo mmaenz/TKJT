@@ -23,6 +23,8 @@ include(FindPackageHandleStandardArgs)
 # Check for required variables
 # =============================================================================
 
+set (OCCT_ROOT_DIR "/usr/local")
+
 if (NOT OCCT_ROOT_DIR)
   message(FATAL_ERROR "OCCT_ROOT_DIR not found. Please locate before proceeding.")
 endif()
@@ -33,7 +35,7 @@ endif()
 
 find_path (OCCT_INCLUDE
   NAMES MMgt_TShared.hxx
-  PATHS "${OCCT_ROOT_DIR}/inc"
+  PATHS "${OCCT_ROOT_DIR}/include/opencascade/"
   NO_DEFAULT_PATH
 )
 

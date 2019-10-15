@@ -17,7 +17,6 @@
 #include <JtNode_MetaData.hxx>
 #include <JtData_Reader.hxx>
 
-IMPLEMENT_STANDARD_HANDLE (JtNode_MetaData, JtNode_Group)
 IMPLEMENT_STANDARD_RTTIEXT(JtNode_MetaData, JtNode_Group)
 
 IMPLEMENT_OBJECT_CLASS(JtNode_MetaData, "MetaData Object",

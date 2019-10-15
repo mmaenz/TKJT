@@ -34,6 +34,7 @@
 #include <TransferBRep.hxx>
 #include <Transfer_TransientProcess.hxx>
 #include <XtControl_Reader.hxx>
+#include <JtNode_Group.hxx>
 
 #pragma comment(lib,"TKXSBase.lib")
 #pragma comment(lib,"TKXT.lib")

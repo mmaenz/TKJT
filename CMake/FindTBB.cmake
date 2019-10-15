@@ -23,6 +23,8 @@ include(FindPackageHandleStandardArgs)
 # Check for required variables
 # =============================================================================
 
+set (TBB_ROOT_DIR "/usr/local")
+
 if (NOT TBB_ROOT_DIR)
   message(FATAL_ERROR "TBB_ROOT_DIR not found. Please locate before proceeding.")
 endif()
@@ -33,7 +35,7 @@ endif()
 
 find_path (TBB_INCLUDE
   NAMES tbb/tbb.h
-  PATHS "${TBB_ROOT_DIR}/include"
+  PATHS "${TBB_ROOT_DIR}/include/"
   NO_DEFAULT_PATH
 )
 

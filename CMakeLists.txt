@@ -11,8 +11,12 @@
 #	FindOCCT.cmake / OCCT_ROOT_DIR
 #	FindTBB.cmake  / TBB_ROOT_DIR
 #	FindZLIB.cmake / ZLIB_ROOT_DIR
+cmake_minimum_required(VERSION 3.15)
+set (CMAKE_CXX_STANDARD 17)
 
 project (TKJT)
+
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake")
 
 find_package (OCCT REQUIRED)
 find_package (TBB REQUIRED)
@@ -69,9 +73,9 @@ include_directories (${TKJT_HEADER_DIRS})
 
 add_library (TKJT SHARED ${TKJT_HEADERS} ${TKJT_SOURCES})
 
-target_link_libraries_config_aware (TKJT OCCT)
-target_link_libraries_config_aware (TKJT TBB)
-target_link_libraries_config_aware (TKJT ZLIB)
+target_link_libraries (TKJT OCCT)
+target_link_libraries (TKJT TBB)
+target_link_libraries (TKJT ZLIB)
 
 if (BUILD_PROJECT STREQUAL "TKJT")
   set_target_properties (TKJT PROPERTIES PUBLIC_HEADER "${TKJT_HEADERS}")

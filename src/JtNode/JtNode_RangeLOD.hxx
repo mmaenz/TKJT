@@ -33,7 +33,7 @@ public:
   const Jt_VecF32& RangeLimits() const { return myVecR; }
   const Jt_CoordF32& Center()    const { return myCenter; }
 
-  DEFINE_STANDARD_RTTI(JtNode_RangeLOD)
+  DEFINE_STANDARD_RTTIEXT(JtNode_RangeLOD,JtNode_LOD)
   DEFINE_OBJECT_CLASS (JtNode_RangeLOD)
 
 protected:

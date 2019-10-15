@@ -17,7 +17,6 @@
 #include <JtNode_LOD.hxx>
 #include <JtData_Reader.hxx>
 
-IMPLEMENT_STANDARD_HANDLE (JtNode_LOD, JtNode_Group)
 IMPLEMENT_STANDARD_RTTIEXT(JtNode_LOD, JtNode_Group)
 
 IMPLEMENT_OBJECT_CLASS(JtNode_LOD, "LOD Object",

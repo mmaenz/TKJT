@@ -41,7 +41,7 @@ public:
 public:
   JtData_DeferredObject (Jt_I32 theObjectID) : myObjectID (theObjectID) {}
 
-  DEFINE_STANDARD_RTTI(JtData_DeferredObject)
+  DEFINE_STANDARD_RTTIEXT(JtData_DeferredObject,JtData_Object)
 
 protected:
   Jt_I32 myObjectID;

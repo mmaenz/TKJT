@@ -17,7 +17,6 @@
 #include <JtNode_Partition.hxx>
 #include <JtData_Reader.hxx>
 
-IMPLEMENT_STANDARD_HANDLE (JtNode_Partition, JtNode_Group)
 IMPLEMENT_STANDARD_RTTIEXT(JtNode_Partition, JtNode_Group)
 
 IMPLEMENT_OBJECT_CLASS(JtNode_Partition, "Partition Object",

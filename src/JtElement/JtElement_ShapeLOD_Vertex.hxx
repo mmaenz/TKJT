@@ -102,7 +102,7 @@ public:
   //! Normals; can be empty if there is no normals data.
   const VertexData& Normals()  const { return myNormals; }
 
-  DEFINE_STANDARD_RTTI(JtElement_ShapeLOD_Vertex)
+  DEFINE_STANDARD_RTTIEXT(JtElement_ShapeLOD_Vertex,JtElement_ShapeLOD_Base)
   DEFINE_OBJECT_CLASS (JtElement_ShapeLOD_Vertex)
 
 protected:

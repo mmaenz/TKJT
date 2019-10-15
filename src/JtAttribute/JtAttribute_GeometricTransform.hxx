@@ -37,7 +37,7 @@ public:
   //! Return transformationy.
   const Standard_Real* GetTrsf() const { return myTransform; }
 
-  DEFINE_STANDARD_RTTI(JtAttribute_GeometricTransform)
+  DEFINE_STANDARD_RTTIEXT(JtAttribute_GeometricTransform,JtAttribute_Base)
   DEFINE_OBJECT_CLASS (JtAttribute_GeometricTransform)
 
 protected:

@@ -26,7 +26,7 @@
 #include <JtData_ClassInfo.hxx>
 
 class JtData_Reader;
-class Handle(JtProperty_LateLoaded);
+class JtProperty_LateLoaded;
 
 DEFINE_STANDARD_HANDLE(JtData_Object, MMgt_TShared)
 
@@ -62,7 +62,7 @@ public:
   //! Bind a name to the object.
   Standard_EXPORT virtual void BindName (const TCollection_ExtendedString& theName);
 
-  DEFINE_STANDARD_RTTI(JtData_Object)
+  DEFINE_STANDARD_RTTIEXT(JtData_Object,MMgt_TShared)
 };
 
 #define DEFINE_OBJECT_CLASS(Class) \

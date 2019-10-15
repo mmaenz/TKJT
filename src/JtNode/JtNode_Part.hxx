@@ -36,7 +36,7 @@ public:
   //! Get the late loaded properties associated with this node.
   const VectorOfLateLoads& LateLoads() const { return myLateLoads; }
 
-  DEFINE_STANDARD_RTTI(JtNode_Part)
+  DEFINE_STANDARD_RTTIEXT(JtNode_Part,JtNode_MetaData)
   DEFINE_OBJECT_CLASS (JtNode_Part)
 
 protected:

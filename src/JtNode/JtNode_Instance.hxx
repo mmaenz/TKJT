@@ -37,7 +37,7 @@ public:
   //! Return referenced object.
   const Handle(JtData_Object)& Object() const { return myObject; }
 
-  DEFINE_STANDARD_RTTI(JtNode_Instance)
+  DEFINE_STANDARD_RTTIEXT(JtNode_Instance,JtNode_Base)
   DEFINE_OBJECT_CLASS (JtNode_Instance)
 
 protected:

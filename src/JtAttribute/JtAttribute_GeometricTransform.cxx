@@ -21,7 +21,6 @@
 #include <gp_Trsf.hxx>
 #include <Precision.hxx>
 
-IMPLEMENT_STANDARD_HANDLE (JtAttribute_GeometricTransform, JtAttribute_Base)
 IMPLEMENT_STANDARD_RTTIEXT(JtAttribute_GeometricTransform, JtAttribute_Base)
 
 IMPLEMENT_OBJECT_CLASS(JtAttribute_GeometricTransform, "Attribute Object",

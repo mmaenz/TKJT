@@ -31,7 +31,7 @@ public:
   //! Dump this entity.
   Standard_EXPORT virtual Standard_Integer Dump (Standard_OStream& theStream) const;
 
-  DEFINE_STANDARD_RTTI(JtElement_ShapeLOD_Base)
+  DEFINE_STANDARD_RTTIEXT(JtElement_ShapeLOD_Base,JtData_Object)
   DEFINE_OBJECT_CLASS (JtElement_ShapeLOD_Base)
 };
 

@@ -17,7 +17,6 @@
 #include <JtData_DeferredObject.hxx>
 #include <JtData_Reader.hxx>
 
-IMPLEMENT_STANDARD_HANDLE (JtData_DeferredObject, JtData_Object)
 IMPLEMENT_STANDARD_RTTIEXT(JtData_DeferredObject, JtData_Object)
 
 //=======================================================================

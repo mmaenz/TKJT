@@ -32,7 +32,7 @@ public:
   //! Get the property value.
   const TCollection_ExtendedString& Value() const { return myValue; }
 
-  DEFINE_STANDARD_RTTI(JtProperty_String)
+  DEFINE_STANDARD_RTTIEXT(JtProperty_String,JtProperty_Base)
   DEFINE_OBJECT_CLASS (JtProperty_String)
 
 protected:

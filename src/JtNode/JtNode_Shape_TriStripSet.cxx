@@ -17,7 +17,6 @@
 #include <JtNode_Shape_TriStripSet.hxx>
 #include <JtData_Reader.hxx>
 
-IMPLEMENT_STANDARD_HANDLE (JtNode_Shape_TriStripSet, JtNode_Shape_Vertex)
 IMPLEMENT_STANDARD_RTTIEXT(JtNode_Shape_TriStripSet, JtNode_Shape_Vertex)
 
 IMPLEMENT_OBJECT_CLASS(JtNode_Shape_TriStripSet, "Tri-Strip Set Shape Object",

@@ -36,7 +36,7 @@ public:
 
   void Unload() { myDefferedObject.Nullify(); }
 
-  DEFINE_STANDARD_RTTI(JtProperty_LateLoaded)
+  DEFINE_STANDARD_RTTIEXT(JtProperty_LateLoaded,JtProperty_Base)
   DEFINE_OBJECT_CLASS (JtProperty_LateLoaded)
 
 protected:

@@ -19,7 +19,6 @@
 
 #include <TColStd_HArray1OfCharacter.hxx>
 
-IMPLEMENT_STANDARD_HANDLE (JtElement_XTBRep, JtData_Object)
 IMPLEMENT_STANDARD_RTTIEXT(JtElement_XTBRep, JtData_Object)
 
 IMPLEMENT_OBJECT_CLASS(JtElement_XTBRep, "XT B-Rep Object",
