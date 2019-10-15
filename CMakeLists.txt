@@ -11,7 +11,7 @@
 #	FindOCCT.cmake / OCCT_ROOT_DIR
 #	FindTBB.cmake  / TBB_ROOT_DIR
 #	FindZLIB.cmake / ZLIB_ROOT_DIR
-cmake_minimum_required(VERSION 3.15)
+cmake_minimum_required(VERSION 3.10)
 set (CMAKE_CXX_STANDARD 17)
 
 project (TKJT)
