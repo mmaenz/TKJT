@@ -22,13 +22,10 @@ include(FindPackageHandleStandardArgs)
 # =============================================================================
 # Check for required variables
 # =============================================================================
+set (TBB_ROOT_DIR "/usr")
 
 if (APPLE)
   set (TBB_ROOT_DIR "/usr/local")
-endif()
-
-if(LINUX)
-  set (TBB_ROOT_DIR "/usr")
 endif()
 
 if (WIN32)
