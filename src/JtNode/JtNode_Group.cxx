@@ -46,10 +46,12 @@ Standard_Boolean JtNode_Group::Read (JtData_Reader& theReader)
 //=======================================================================
 Standard_Integer JtNode_Group::Dump (Standard_OStream& theStream) const
 {
-  theStream << "JtNode_Group { ";
+  /*
+	theStream << "JtNode_Group { ";
   for (VectorOfObjects::SizeType i = 0; i < myChildren.Count(); i++)
     theStream << myChildren[i] << " ";
   theStream << "} ";
+  */
   return JtNode_Base::Dump (theStream);
 }
 

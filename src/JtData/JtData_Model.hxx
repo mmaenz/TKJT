@@ -34,7 +34,7 @@ DEFINE_STANDARD_HANDLE(JtData_Model, MMgt_TShared)
 
 //! Model class dealing with Jt file and providing base services
 //! on file open, read header, fetching Jt segments.
-class JtData_Model : public MMgt_TShared
+class JtData_Model : public Standard_Transient
 {
 public:
   static const Standard_Boolean IsLittleEndianHost;
@@ -71,7 +71,7 @@ public:
   //! Return minor version of Jt file.
   Standard_Integer                  MinorVersion() const { return myMinorVersion; }
 
-  DEFINE_STANDARD_RTTIEXT(JtData_Model,MMgt_TShared)
+  DEFINE_STANDARD_RTTIEXT(JtData_Model,Standard_Transient)
 
 protected:
   //! Open the file.

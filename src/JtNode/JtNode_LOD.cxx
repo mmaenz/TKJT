@@ -48,9 +48,11 @@ Standard_Boolean JtNode_LOD::Read (JtData_Reader& theReader)
 //=======================================================================
 Standard_Integer JtNode_LOD::Dump (Standard_OStream& theStream) const
 {
-  theStream << "JtNode_LOD { ";
+  /*
+	theStream << "JtNode_LOD { ";
   for (VectorOfObjects::SizeType i = 0; i < myChildren.Count(); i++)
     theStream << myChildren[i] << " ";
   theStream << "} ";
+  */
   return JtNode_Base::Dump (theStream);
 }

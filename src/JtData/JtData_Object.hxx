@@ -31,7 +31,7 @@ class JtProperty_LateLoaded;
 DEFINE_STANDARD_HANDLE(JtData_Object, MMgt_TShared)
 
 //! The base class representing Jt entity.
-class JtData_Object : public MMgt_TShared
+class JtData_Object : public Standard_Transient
 {
 public:
   typedef JtData_ClassInfo <JtData_Object> ClassInfo;
@@ -62,7 +62,7 @@ public:
   //! Bind a name to the object.
   Standard_EXPORT virtual void BindName (const TCollection_ExtendedString& theName);
 
-  DEFINE_STANDARD_RTTIEXT(JtData_Object,MMgt_TShared)
+  DEFINE_STANDARD_RTTIEXT(JtData_Object,Standard_Transient)
 };
 
 #define DEFINE_OBJECT_CLASS(Class) \

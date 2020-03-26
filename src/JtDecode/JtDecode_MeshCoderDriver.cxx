@@ -686,7 +686,7 @@ void JtDecode_MeshCodec::run()
   if (_pDstVFM.IsNull())
     _pDstVFM = new JtDecode_DualVFMesh();
 
-  Standard_ASSERT_RETURN (_pDstVFM != NULL, "Error", );
+  //Standard_ASSERT_RETURN (_pDstVFM != NULL, "Error", );
   _pDstVFM->clear();
   clear();
 

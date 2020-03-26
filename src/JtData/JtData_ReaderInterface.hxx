@@ -312,7 +312,7 @@ public:
   template <class Object>
   Standard_Boolean Read(Object &theObject)
   {
-    return static_cast<Derived *>(this)->ReadObject(theObject);
+    return static_cast<Derived *>(this)->Read(theObject);
   }
 
 private:
