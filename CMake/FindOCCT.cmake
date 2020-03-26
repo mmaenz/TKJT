@@ -34,7 +34,7 @@ endif()
 # =============================================================================
 
 find_path (OCCT_INCLUDE
-  NAMES MMgt_TShared.hxx
+  NAMES Standard_Transient.hxx
   PATHS "${OCCT_ROOT_DIR}/include/opencascade/"
   NO_DEFAULT_PATH
 )
@@ -111,6 +111,7 @@ FIND_PACKAGE_HANDLE_STANDARD_ARGS (OCCT DEFAULT_MSG OCCT_INCLUDE OCCT_TKernel_LI
 if (OCCT_FOUND)
   set (OCCT_INCLUDE_DIRS      ${OCCT_INCLUDE})
   set (OCCT_LIBRARIES_RELEASE ${OCCT_TKernel_RELEASE_LIBRARY} ${OCCT_TKMath_RELEASE_LIBRARY})
+  set (OCCT_LIB				  ${OCCT_TKernel_RELEASE_LIBRARY} ${OCCT_TKMath_RELEASE_LIBRARY})
   set (OCCT_LIBRARIES_DEBUG   ${OCCT_TKernel_DEBUG_LIBRARY} ${OCCT_TKMath_DEBUG_LIBRARY})
   set (OCCT_DLLS_RELEASE      ${OCCT_TKernel_RELEASE_DLL} ${OCCT_TKMath_RELEASE_DLL})
   set (OCCT_DLLS_DEBUG        ${OCCT_TKernel_DEBUG_DLL} ${OCCT_TKMath_DEBUG_DLL})
