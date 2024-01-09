@@ -24,10 +24,10 @@ class JtProperty_String : public JtProperty_Base
 {
 public:
   //! Read this entity from a JT file.
-  Standard_EXPORT virtual Standard_Boolean Read (JtData_Reader& theReader);
+  Standard_EXPORT virtual Standard_Boolean Read (JtData_Reader& theReader) override;
 
   //! Dump this entity.
-  Standard_EXPORT virtual Standard_Integer Dump (Standard_OStream& theStream) const;
+  Standard_EXPORT virtual Standard_Integer Dump (Standard_OStream& theStream) const override;
 
   //! Get the property value.
   const TCollection_ExtendedString& Value() const { return myValue; }

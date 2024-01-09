@@ -23,7 +23,15 @@ include(FindPackageHandleStandardArgs)
 # Check for required variables
 # =============================================================================
 
-set (OCCT_ROOT_DIR "/usr/local")
+if (APPLE)
+  if (${DETECT_MACPORTS} EQUAL 0)
+    set(OCCT_ROOT_DIR "${MACPORTS_PREFIX}/libexec/opencascade")
+  else()
+    set (OCCT_ROOT_DIR "/usr/local")
+  endif()
+else()
+  set (OCCT_ROOT_DIR "/usr")
+endif()
 
 if (NOT OCCT_ROOT_DIR)
   message(FATAL_ERROR "OCCT_ROOT_DIR not found. Please locate before proceeding.")
@@ -32,17 +40,16 @@ endif()
 # =============================================================================
 # Check for required includes
 # =============================================================================
-
 find_path (OCCT_INCLUDE
   NAMES Standard_Transient.hxx
-  PATHS "${OCCT_ROOT_DIR}/include/opencascade/"
+  PATHS "${OCCT_ROOT_DIR}/include/opencascade"
+  REQUIRED
   NO_DEFAULT_PATH
 )
 
 if (NOT OCCT_INCLUDE)
   message (SEND_ERROR "OCCT headers not found. Please locate OCCT_INCLUDE.")
 endif()
-
 # =============================================================================
 # Check for required libraries
 # =============================================================================
@@ -111,7 +118,7 @@ FIND_PACKAGE_HANDLE_STANDARD_ARGS (OCCT DEFAULT_MSG OCCT_INCLUDE OCCT_TKernel_LI
 if (OCCT_FOUND)
   set (OCCT_INCLUDE_DIRS      ${OCCT_INCLUDE})
   set (OCCT_LIBRARIES_RELEASE ${OCCT_TKernel_RELEASE_LIBRARY} ${OCCT_TKMath_RELEASE_LIBRARY})
-  set (OCCT_LIB				  ${OCCT_TKernel_RELEASE_LIBRARY} ${OCCT_TKMath_RELEASE_LIBRARY})
+  set (OCCT_LIB				        ${OCCT_TKernel_RELEASE_LIBRARY} ${OCCT_TKMath_RELEASE_LIBRARY})
   set (OCCT_LIBRARIES_DEBUG   ${OCCT_TKernel_DEBUG_LIBRARY} ${OCCT_TKMath_DEBUG_LIBRARY})
   set (OCCT_DLLS_RELEASE      ${OCCT_TKernel_RELEASE_DLL} ${OCCT_TKMath_RELEASE_DLL})
   set (OCCT_DLLS_DEBUG        ${OCCT_TKernel_DEBUG_DLL} ${OCCT_TKMath_DEBUG_DLL})

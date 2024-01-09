@@ -27,10 +27,10 @@ public:
   Standard_EXPORT JtAttribute_Base();
 
   //! Read this entity from a JT file.
-  Standard_EXPORT virtual Standard_Boolean Read (JtData_Reader& theReader);
+  Standard_EXPORT virtual Standard_Boolean Read (JtData_Reader& theReader) override;
 
   //! Dump this entity.
-  Standard_EXPORT virtual Standard_Integer Dump (Standard_OStream& theStream) const;
+  Standard_EXPORT virtual Standard_Integer Dump (Standard_OStream& theStream) const override;
 
   DEFINE_STANDARD_RTTIEXT(JtAttribute_Base,JtData_Object)
 

@@ -11,10 +11,26 @@
 #	FindOCCT.cmake / OCCT_ROOT_DIR
 #	FindTBB.cmake  / TBB_ROOT_DIR
 #	FindZLIB.cmake / ZLIB_ROOT_DIR
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.27)
 set (CMAKE_CXX_STANDARD 17)
 
 project (TKJT)
+
+# See StackOverflow: https://stackoverflow.com/questions/1487752/how-do-i-instruct-cmake-to-look-for-libraries-installed-by-macports
+# Detect if the "port" command is valid on this system; if so, return full path
+if (APPLE)
+  EXECUTE_PROCESS(COMMAND which port RESULT_VARIABLE DETECT_MACPORTS OUTPUT_VARIABLE MACPORTS_PREFIX ERROR_QUIET OUTPUT_STRIP_TRAILING_WHITESPACE)
+  IF (${DETECT_MACPORTS} EQUAL 0)
+    set(DETECT_MACPORTS "${DETECT_MACPORTS}" CACHE INTERNAL "DETECT_MACPORTS")
+    set(DETECT_MACPORTS "${MACPORTS_PREFIX}" CACHE INTERNAL "MACPORTS_PREFIX")
+    # "/opt/local/bin/port" doesn't have libs, so we get the parent directory
+    GET_FILENAME_COMPONENT(MACPORTS_PREFIX ${MACPORTS_PREFIX} DIRECTORY)
+    # "/opt/local/bin" doesn't have libs, so we get the parent directory
+    GET_FILENAME_COMPONENT(MACPORTS_PREFIX ${MACPORTS_PREFIX} DIRECTORY)
+    # "/opt/local" is where MacPorts lives, add `/lib` suffix and link
+    LINK_DIRECTORIES("${MACPORTS_PREFIX}/lib")
+  ENDIF()
+endif()
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/CMake")
 
@@ -37,7 +53,7 @@ set(ZLIB_LIB "z")
 # Define production steps
 # =============================================================================
 
-set (TKJT_HEADER_DIRS)
+set (TKJT_HEADER_DIRS "")
 set (TKJT_HEADERS)
 set (TKJT_SOURCES)
 set (TKJT_PACKAGES)
@@ -72,10 +88,8 @@ foreach (TKJT_PACKAGE ${TKJT_PACKAGES})
 endforeach()
 
 include_directories (${TKJT_HEADER_DIRS})
-
+set(TKJT_HEADER_DIRS "${TKJT_HEADER_DIRS}" CACHE INTERNAL "TKJT_HEADER_DIRS")
 add_library (TKJT SHARED ${TKJT_HEADERS} ${TKJT_SOURCES})
-
-
 
 target_link_libraries (TKJT ${OCCT_LIB})
 target_link_libraries (TKJT ${TBB_LIB})

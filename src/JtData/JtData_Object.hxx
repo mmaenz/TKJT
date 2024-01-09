@@ -17,7 +17,7 @@
 #ifndef _JtData_Object_HeaderFile
 #define _JtData_Object_HeaderFile
 
-#include <MMgt_TShared.hxx>
+#include <Standard_Transient.hxx>
 #include <Standard_DefineHandle.hxx>
 #include <NCollection_List.hxx>
 #include <TCollection_ExtendedString.hxx>

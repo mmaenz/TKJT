@@ -64,9 +64,19 @@ Jt_GUID::Jt_GUID (const char* theString)
 // =======================================================================
 Standard_Boolean Jt_GUID::ToString (char* theString) const
 {
+// 'sprintf' is deprecated: This function is provided for compatibility reasons only.  Due to security 
+// concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead.
+#ifdef __APPLE__
+  return GUIDStringLength ==
+    snprintf (theString, 42, "%08x-%04x-%04x-%02x-%02x-%02x-%02x-%02x-%02x-%02x-%02x",
+      data.codes.U32, (Jt_U32) data.codes.U16[0], (Jt_U32) data.codes.U16[1],
+      (Jt_U32) data.codes.U8[0], (Jt_U32) data.codes.U8[1], (Jt_U32) data.codes.U8[2], (Jt_U32) data.codes.U8[3],
+      (Jt_U32) data.codes.U8[4], (Jt_U32) data.codes.U8[5], (Jt_U32) data.codes.U8[6], (Jt_U32) data.codes.U8[7]);
+#elif
   return GUIDStringLength ==
     sprintf (theString, "%08x-%04x-%04x-%02x-%02x-%02x-%02x-%02x-%02x-%02x-%02x",
       data.codes.U32, (Jt_U32) data.codes.U16[0], (Jt_U32) data.codes.U16[1],
       (Jt_U32) data.codes.U8[0], (Jt_U32) data.codes.U8[1], (Jt_U32) data.codes.U8[2], (Jt_U32) data.codes.U8[3],
       (Jt_U32) data.codes.U8[4], (Jt_U32) data.codes.U8[5], (Jt_U32) data.codes.U8[6], (Jt_U32) data.codes.U8[7]);
+#endif
 }

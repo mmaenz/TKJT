@@ -24,13 +24,13 @@ class JtNode_Group : public JtNode_Base
 {
 public:
   //! Read this entity from a JT file.
-  Standard_EXPORT virtual Standard_Boolean Read (JtData_Reader& theReader);
+  Standard_EXPORT virtual Standard_Boolean Read (JtData_Reader& theReader) override;
 
   //! Dump this entity.
-  Standard_EXPORT virtual Standard_Integer Dump (Standard_OStream& theStream) const;
+  Standard_EXPORT virtual Standard_Integer Dump (Standard_OStream& theStream) const override;
 
   //! Bind other objects to the object.
-  Standard_EXPORT virtual void BindObjects (const MapOfObjects& theObjectsMap);
+  Standard_EXPORT virtual void BindObjects (const MapOfObjects& theObjectsMap) override;
 
   //! Return list of children.
   const VectorOfObjects& Children() const { return myChildren; }

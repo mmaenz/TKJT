@@ -26,10 +26,10 @@ class JtElement_ShapeLOD_Base : public JtData_Object
 {
 public:
   //! Read this entity from a JT file.
-  Standard_EXPORT virtual Standard_Boolean Read (JtData_Reader& theReader);
+  Standard_EXPORT virtual Standard_Boolean Read (JtData_Reader& theReader) override;
 
   //! Dump this entity.
-  Standard_EXPORT virtual Standard_Integer Dump (Standard_OStream& theStream) const;
+  Standard_EXPORT virtual Standard_Integer Dump (Standard_OStream& theStream) const override;
 
   DEFINE_STANDARD_RTTIEXT(JtElement_ShapeLOD_Base,JtData_Object)
   DEFINE_OBJECT_CLASS (JtElement_ShapeLOD_Base)

@@ -88,10 +88,10 @@ public:
 
 public:
   //! Read this entity from a JT file.
-  Standard_EXPORT virtual Standard_Boolean Read (JtData_Reader &theReader);
+  Standard_EXPORT virtual Standard_Boolean Read (JtData_Reader &theReader) override;
 
   //! Dump this entity.
-  Standard_EXPORT virtual Standard_Integer Dump (Standard_OStream& S) const;
+  Standard_EXPORT virtual Standard_Integer Dump (Standard_OStream& S) const override;
 
   //! Indices into the vertex parameters arrays.
   const IndicesVec& Indices()  const { return myIndices; }

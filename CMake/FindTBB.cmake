@@ -24,8 +24,12 @@ include(FindPackageHandleStandardArgs)
 # =============================================================================
 
 if (UNIX)
-  if (APPLE)  
-    set (TBB_ROOT_DIR "/usr/local")
+  if (APPLE)
+    if (${DETECT_MACPORTS} EQUAL 0)
+      set(TBB_ROOT_DIR "${MACPORTS_PREFIX}")
+    elseif()
+      set (TBB_ROOT_DIR "/usr/local")
+    endif()
   else()
     set (TBB_ROOT_DIR "/usr")
   endif()
@@ -43,7 +47,7 @@ endif()
 
 find_path (TBB_INCLUDE
   NAMES tbb/tbb.h
-  PATHS "${TBB_ROOT_DIR}/include/"
+  PATHS "${TBB_ROOT_DIR}/include"
   NO_DEFAULT_PATH
 )
 

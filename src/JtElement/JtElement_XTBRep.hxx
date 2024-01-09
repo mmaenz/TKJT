@@ -26,10 +26,10 @@ public:
   JtElement_XTBRep() : myVersion (0), myPKMajorVersion (0), myPKMinorVersion (0), myPKBuild (0) {}
 
   //! Read this entity from a JT file.
-  Standard_EXPORT virtual Standard_Boolean Read (JtData_Reader &theReader);
+  Standard_EXPORT virtual Standard_Boolean Read (JtData_Reader &theReader) override;
 
   //! Dump this entity.
-  Standard_EXPORT virtual Standard_Integer Dump (Standard_OStream& S) const;
+  Standard_EXPORT virtual Standard_Integer Dump (Standard_OStream& S) const override;
 
   const Jt_String& Data() const { return myData; }
 
